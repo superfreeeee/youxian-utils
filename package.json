@@ -2,7 +2,11 @@
   "name": "@youxian/utils",
   "version": "0.0.1-alpha.0",
   "description": "utils made by @youxian",
-  "keywords": ["utils", "react", "youxian"],
+  "keywords": [
+    "utils",
+    "react",
+    "youxian"
+  ],
   "author": "superfree <superfreeeee@gmail.com>",
   "homepage": "https://github.com/superfreeeee/-youxian-utils#readme",
   "license": "MIT",
@@ -18,7 +22,9 @@
     "types": "types"
   },
   "files": [
-    "lib"
+    "lib",
+    "types",
+    "src"
   ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
