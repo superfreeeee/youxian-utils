@@ -2,8 +2,15 @@
   "compilerOptions": {
     "declaration": true,
     "emitDeclarationOnly": true,
-    "declarationDir": "types",
-    "esModuleInterop": true
+    "declarationDir": "lib",
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "jsx": "react",
+    "paths": {
+      "@*": ["src/*"],
+      "@utils": ["src/utils"],
+      "@hooks": ["src/hooks"]
+    }
   },
   "include": ["src/*"]
 }

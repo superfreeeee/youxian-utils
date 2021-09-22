@@ -15,6 +15,11 @@ const config = {
     },
   },
   resolve: {
+    alias: {
+      '@*': path.resolve(__dirname, 'src/*'),
+      '@utils': path.resolve(__dirname, 'src/utils'),
+      '@hooks': path.resolve(__dirname, 'src/hooks'),
+    },
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
   },
   module: {
@@ -26,6 +31,7 @@ const config = {
     ],
   },
   externals: [{ react: 'react' }],
+  plugins: [new CleanWebpackPlugin(), new WebpackBar()],
 };
 
 module.exports = config;

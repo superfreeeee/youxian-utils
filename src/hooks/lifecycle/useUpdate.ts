@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, DependencyList } from 'react';
 
-const useUpdate = (fn: () => any): void => {
-  useEffect(fn);
+const useUpdate = (fn: () => any, deps?: DependencyList): void => {
+  useEffect(fn, deps);
 };
 
 export default useUpdate;

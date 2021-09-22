@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 
 type ForceUpdateFn = () => void;
 
@@ -7,7 +7,9 @@ type ForceUpdateFn = () => void;
  * @returns
  */
 const useForceUpdate = (): ForceUpdateFn => {
-  const [, forceUpdate] = useState<void>();
+  const [bool, setBool] = useState(false);
+
+  const forceUpdate = useCallback(() => setBool(!bool), [bool]);
 
   return forceUpdate;
 };
