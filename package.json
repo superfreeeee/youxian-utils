@@ -14,7 +14,8 @@
   "scripts": {
     "build": "yarn clean && webpack && tsc",
     "clean": "rm -rf lib/",
-    "test": "jest"
+    "test": "jest",
+    "test:log": "DEBUG=utils:dev jest"
   },
   "directories": {
     "src": "src",
