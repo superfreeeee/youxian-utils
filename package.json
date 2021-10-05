@@ -8,7 +8,7 @@
     "youxian"
   ],
   "author": "superfree <superfreeeee@gmail.com>",
-  "homepage": "https://github.com/superfreeeee/-youxian-utils#readme",
+  "homepage": "https://github.com/superfreeeee/youxian-utils#readme",
   "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
@@ -33,10 +33,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/superfreeeee/-youxian-utils.git"
+    "url": "git+https://github.com/superfreeeee/youxian-utils.git"
   },
   "bugs": {
-    "url": "https://github.com/superfreeeee/-youxian-utils/issues"
+    "url": "https://github.com/superfreeeee/youxian-utils/issues"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
