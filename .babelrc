@@ -1,0 +1,16 @@
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"],
+  "ignore": ["**/__tests__"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@*": "src/*",
+          "@hooks": "./src/hooks",
+          "@utils": "./src/utils"
+        }
+      }
+    ]
+  ]
+}

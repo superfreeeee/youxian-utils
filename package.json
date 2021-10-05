@@ -1,6 +1,6 @@
 {
   "name": "@youxian/utils",
-  "version": "0.0.1-alpha.7",
+  "version": "0.0.1-alpha.8",
   "description": "utils made by @youxian",
   "keywords": [
     "utils",
@@ -52,7 +52,6 @@
     "@types/react-test-renderer": "^17.0.1",
     "babel-jest": "^27.2.1",
     "babel-loader": "^8.2.2",
-    "babel-plugin-module-resolver": "^4.1.0",
     "clean-webpack-plugin": "^4.0.0",
     "jest": "^27.2.1",
     "react": "^17.0.2",
