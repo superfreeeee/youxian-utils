@@ -7,7 +7,7 @@ const config = {
   mode: 'production',
   entry: path.resolve(__dirname, 'src/index'),
   output: {
-    path: path.resolve(__dirname, 'lib'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
     library: {
       name: '__youxian_utils',

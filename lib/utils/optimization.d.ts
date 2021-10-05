@@ -15,3 +15,9 @@ export declare const debounce: (fn: Function, delay?: number) => (...args: any[]
  * @returns
  */
 export declare const throttle: (fn: Function, delay?: number) => (...args: any[]) => void;
+/**
+ * 缓存函数执行结果
+ * @param fn
+ * @returns
+ */
+export declare const cache: <T>(fn: (...args: any[]) => T) => (...args: any[]) => T;
