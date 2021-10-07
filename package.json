@@ -1,6 +1,6 @@
 {
   "name": "@youxian/utils",
-  "version": "0.0.2",
+  "version": "0.0.3-alpha.0",
   "description": "utils made by @youxian",
   "keywords": [
     "utils",
@@ -17,7 +17,8 @@
     "build:webpack": "webpack",
     "clean": "rm -rf lib/",
     "test": "jest",
-    "test:log": "DEBUG=utils:dev jest"
+    "test:log": "DEBUG=utils:dev jest",
+    "test:test": "DEBUG=utils:dev babel-node /Users/superfree/Desktop/Projects/youxian/utils/src/test -x .ts"
   },
   "directories": {
     "src": "src",
