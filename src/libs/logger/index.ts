@@ -1,6 +1,6 @@
 import debug from 'debug';
 
-const DEBUG_KEY = 'utils:dev';
+import { DEBUG_KEY } from './../../constants/keys';
 
 const logger = debug(DEBUG_KEY);
 
