@@ -15,3 +15,39 @@ export const sum = (...nums: number[]): number => nums.reduce((sum, next) => sum
  * @returns
  */
 export const average = (...nums: number[]) => sum(...nums) / nums.length;
+
+/**
+ * 判断偶数
+ * @param num
+ * @returns
+ */
+export const isEven = (num: number) => num % 2 === 0;
+
+/**
+ * 判断奇数
+ * @param num
+ * @returns
+ */
+export const isOdd = (num: number) => num % 2 === 1;
+
+/**
+ * 数字序列生成器
+ * @param start
+ * @param end
+ * @param step
+ * @returns
+ */
+export function range(end: number): number[];
+export function range(start: number, end: number): number[];
+export function range(start: number, end: number, step: number): number[];
+export function range(start: number, end?: number | undefined, step?: number | undefined): number[] {
+  if (end === undefined) {
+    // end -> [0, end, 1]
+    [start, end, step] = [0, start, 1];
+  } else if (step === undefined) {
+    // start, end -> [start, end, 1]
+    [start, end, step] = [start, end, 1];
+  }
+
+  return Array.from({ length: (end - start) / step }, (_, i) => start + i * step);
+}
