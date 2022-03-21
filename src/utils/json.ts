@@ -9,11 +9,11 @@ import Log from '../libs/logger';
  * @param item
  * @returns
  */
-export const tryParse = (text: string): any => {
+export const tryParse = (value: string): any => {
   try {
-    return JSON.parse(text);
+    return JSON.parse(value);
   } catch (e) {
-    Log.error('tryParse fail');
+    Log.warn(`tryParse fail, invalid value=${value}`);
     return {};
   }
 };
@@ -21,11 +21,11 @@ export const tryParse = (text: string): any => {
 /**
  * JSON.
  */
-export const tryStringify = (item: any): any => {
+export const tryStringify = (item: any): string => {
   try {
     return JSON.stringify(item);
   } catch (e) {
     Log.error('tryStringify fail');
-    return {};
+    return '';
   }
 };

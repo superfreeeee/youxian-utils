@@ -1,6 +1,9 @@
 import { useEffect, DependencyList } from 'react';
 
-const useUpdate = (fn: () => any, deps?: DependencyList): void => {
+/**
+ * alias for useEffect
+ */
+export const useUpdate = (fn: () => any, deps?: DependencyList): void => {
   useEffect(fn, deps);
 };
 

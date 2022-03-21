@@ -5,7 +5,9 @@ import { ChangeEventHandler, useCallback, useState } from 'react';
  * @param initValue
  * @returns
  */
-const useInput = <T extends HTMLInputElement>(initValue: string): [string, ChangeEventHandler<T>] => {
+const useInput = <T extends HTMLInputElement>(
+  initValue: string
+): [string, ChangeEventHandler<T>] => {
   const [value, setValue] = useState(initValue);
 
   const handleInputChange: ChangeEventHandler<T> = useCallback((e) => {

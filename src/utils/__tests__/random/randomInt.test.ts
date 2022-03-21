@@ -1,29 +1,49 @@
-import { average } from './../../math';
-import { isDev } from './../../../constants/env';
+import Log from '../../../libs/logger';
+import { average } from '../../math';
 import { randomInt } from '../../random';
 
-describe('test randomInt', () => {
+const createNums = (count: number, max?: number): number[] => {
+  const nums: number[] = [];
+  for (let i = 0; i < count; i++) {
+    max ? nums.push(randomInt(max)) : nums.push(randomInt());
+  }
+  return nums;
+};
+
+const getStatistic = (nums: number[], expectedAvg: number) => {
+  const count = nums.length;
+  const avg = average(...nums);
+  const delta = Math.abs(avg - expectedAvg);
+  return { count, avg, delta };
+};
+
+describe('randomInt tests', () => {
+  test('basic test', () => {
+    const nums = createNums(1000);
+    const { avg, delta } = getStatistic(nums, 0);
+
+    Log.info('nums', nums);
+    Log.info('average', avg);
+    Log.info('expectedAvg', 0);
+    Log.info('delta', delta);
+
+    expect(delta).toBe(0);
+  });
+
   Array.from(Array(5), (_, i) => {
     test(`normal test ${i + 1}`, () => {
       const MAX = 1000;
-      const TIMES = 1000;
+      const expectedAvg = MAX / 2;
 
-      const nums = [];
-      for (let i = 0; i < TIMES; i++) {
-        nums.push(randomInt(MAX));
-      }
+      const nums = createNums(1000, MAX);
+      const { avg, delta } = getStatistic(nums, expectedAvg);
 
-      const avg = average(...nums);
-      const delta = Math.abs(avg - MAX / 2);
+      Log.info('nums', nums);
+      Log.info('average', avg);
+      Log.info('expectedAvg', expectedAvg);
+      Log.info('delta', delta);
 
-      if (isDev) {
-        console.log('nums', nums);
-        console.log('average', avg);
-        console.log('delta', delta);
-        console.log('limit', MAX / 20);
-      }
-
-      expect(delta).toBeLessThan(MAX / 20);
+      expect(delta).toBeLessThan(expectedAvg / 10);
     });
   });
 });

@@ -1,23 +1,22 @@
 import { renderHook } from '@testing-library/react-hooks';
+import { useRef } from 'react';
 
-import useUpdate from '../useUpdate';
+import { useUpdate } from '../useUpdate';
 
-test('test useUpdate', () => {
-  let updateCount = 0;
-
-  const { rerender } = renderHook(() => {
-    useUpdate(() => {
-      updateCount++;
+describe('useUpdate tests', () => {
+  test('basic test', () => {
+    const { result, rerender } = renderHook(() => {
+      const countRef = useRef(0);
+      useUpdate(() => {
+        countRef.current++;
+      });
+      return { countRef };
     });
+
+    expect(result.current.countRef.current).toBe(1);
+    rerender();
+    rerender();
+    rerender();
+    expect(result.current.countRef.current).toBe(4);
   });
-
-  expect(updateCount).toBe(1);
-
-  rerender();
-
-  expect(updateCount).toBe(2);
-
-  rerender();
-
-  expect(updateCount).toBe(3);
 });

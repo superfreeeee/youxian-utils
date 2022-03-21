@@ -16,8 +16,8 @@
     "build:babel": "babel src/ -d lib/ -x .ts",
     "build:webpack": "webpack",
     "clean": "rm -rf lib/",
-    "test": "jest",
-    "test:log": "DEBUG=utils:dev jest",
+    "test": "jest --coverage",
+    "test:log": "DEBUG=utils:dev jest --coverage",
     "test:test": "DEBUG=utils:dev babel-node /Users/superfree/Desktop/Projects/youxian/utils/src/test -x .ts"
   },
   "directories": {

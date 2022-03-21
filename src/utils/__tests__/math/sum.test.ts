@@ -1,6 +1,6 @@
 import { sum } from '../../math';
 
-describe('test sum', () => {
+describe('sum tests', () => {
   test('normal case 1', () => {
     expect(sum()).toBe(0);
   });

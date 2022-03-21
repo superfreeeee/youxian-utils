@@ -1,37 +1,23 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 
-import useForceUpdate from '../useForceUpdate';
+import { useRenderCount } from '../../utils/useRenderCount';
+import { useForceUpdate } from '../useForceUpdate';
 
-test('test useForceUpdate', () => {
-  let updateCount = 0;
+describe('useForceUpdate tests', () => {
+  test('basic test', () => {
+    const { result } = renderHook(() => {
+      const count = useRenderCount();
+      const forceUpdate = useForceUpdate();
+      return { count, forceUpdate };
+    });
 
-  const { result, rerender } = renderHook(() => {
-    updateCount++;
+    expect(result.current.count).toBe(1);
 
-    const forceUpdate = useForceUpdate();
+    act(() => result.current.forceUpdate());
+    expect(result.current.count).toBe(2);
 
-    return { forceUpdate };
+    act(() => result.current.forceUpdate());
+    act(() => result.current.forceUpdate());
+    expect(result.current.count).toBe(4);
   });
-
-  // 首次渲染
-  expect(updateCount).toBe(1);
-
-  // 更新 1 次
-  rerender();
-
-  expect(updateCount).toBe(2);
-
-  // 更新 2 次
-  act(() => {
-    result.current.forceUpdate();
-  });
-
-  expect(updateCount).toBe(3);
-
-  // 更新 3 次
-  act(() => {
-    result.current.forceUpdate();
-  });
-
-  expect(updateCount).toBe(4);
 });

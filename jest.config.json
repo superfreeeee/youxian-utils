@@ -3,6 +3,7 @@
     "^.+\\.tsx?$": "ts-jest"
   },
   "testRegex": "/src/(\\.|/)|.*/__tests__/(\\.|/)|.*\\.test\\.(js|jsx|ts|tsx)$",
+  "testPathIgnorePatterns": ["/templates/"],
   "moduleDirectories": ["node_modules", "src"],
   "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
   "moduleNameMapper": {

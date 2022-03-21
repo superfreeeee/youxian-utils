@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1673090445380" clover="3.2.0">
+  <project timestamp="1673090445380" name="All files">
+    <metrics statements="128" coveredstatements="128" conditionals="11" coveredconditionals="11" methods="44" coveredmethods="44" elements="183" coveredelements="183" complexity="0" loc="128" ncloc="128" packages="7" files="16" classes="16"/>
+    <package name="constants">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="keys.ts" path="/Users/chaoyouxian/Desktop/Projects/@youxian/utils/src/constants/keys.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="hooks.data">
+      <metrics statements="17" coveredstatements="17" conditionals="1" coveredconditionals="1" methods="5" coveredmethods="5"/>
+      <file name="useBoolean.ts" path="/Users/chaoyouxian/Desktop/Projects/@youxian/utils/src/hooks/data/useBoolean.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="4"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="16" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="31" count="4" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+      </file>
+      <file name="useClosestRef.ts" path="/Users/chaoyouxian/Desktop/Projects/@youxian/utils/src/hooks/data/useClosestRef.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="hooks.lifecycle">
+      <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+      <file name="useForceUpdate.ts" path="/Users/chaoyouxian/Desktop/Projects/@youxian/utils/src/hooks/lifecycle/useForceUpdate.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+      <file name="useMount.ts" path="/Users/chaoyouxian/Desktop/Projects/@youxian/utils/src/hooks/lifecycle/useMount.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+      <file name="useUnMount.ts" path="/Users/chaoyouxian/Desktop/Projects/@youxian/utils/src/hooks/lifecycle/useUnMount.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+      <file name="useUpdate.ts" path="/Users/chaoyouxian/Desktop/Projects/@youxian/utils/src/hooks/lifecycle/useUpdate.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="hooks.utils">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="useRenderCount.ts" path="/Users/chaoyouxian/Desktop/Projects/@youxian/utils/src/hooks/utils/useRenderCount.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="libs.defer-promise">
+      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <file name="index.ts" path="/Users/chaoyouxian/Desktop/Projects/@youxian/utils/src/libs/defer-promise/index.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="22" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="libs.logger">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="index.ts" path="/Users/chaoyouxian/Desktop/Projects/@youxian/utils/src/libs/logger/index.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="69" coveredstatements="69" conditionals="8" coveredconditionals="8" methods="27" coveredmethods="27"/>
+      <file name="json.ts" path="/Users/chaoyouxian/Desktop/Projects/@youxian/utils/src/utils/json.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+      </file>
+      <file name="math.ts" path="/Users/chaoyouxian/Desktop/Projects/@youxian/utils/src/utils/math.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="3" coveredconditionals="3" methods="7" coveredmethods="7"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="6220" type="stmt"/>
+        <line num="18" count="11" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="32" count="5" type="stmt"/>
+        <line num="44" count="5" type="stmt"/>
+        <line num="49" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="51" count="2" type="stmt"/>
+        <line num="52" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="54" count="2" type="stmt"/>
+        <line num="57" count="6" type="stmt"/>
+        <line num="59" count="38" type="stmt"/>
+      </file>
+      <file name="optimization.ts" path="/Users/chaoyouxian/Desktop/Projects/@youxian/utils/src/utils/optimization.ts">
+        <metrics statements="24" coveredstatements="24" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="8"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="10" type="stmt"/>
+        <line num="16" count="10" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="11" type="cond" truecount="1" falsecount="0"/>
+        <line num="33" count="6" type="stmt"/>
+        <line num="35" count="5" type="stmt"/>
+        <line num="36" count="5" type="stmt"/>
+        <line num="37" count="5" type="stmt"/>
+        <line num="38" count="5" type="stmt"/>
+        <line num="52" count="3" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="57" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="63" count="2" type="stmt"/>
+      </file>
+      <file name="random.ts" path="/Users/chaoyouxian/Desktop/Projects/@youxian/utils/src/utils/random.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <line num="9" count="5000" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="23" count="6000" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="1000" type="stmt"/>
+        <line num="25" count="5000" type="cond" truecount="1" falsecount="0"/>
+        <line num="26" count="5000" type="stmt"/>
+        <line num="29" count="6000" type="stmt"/>
+      </file>
+      <file name="string.ts" path="/Users/chaoyouxian/Desktop/Projects/@youxian/utils/src/utils/string.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="10" count="3" type="stmt"/>
+      </file>
+      <file name="time.ts" path="/Users/chaoyouxian/Desktop/Projects/@youxian/utils/src/utils/time.ts">
+        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="31" count="4" type="stmt"/>
+        <line num="32" count="4" type="stmt"/>
+        <line num="33" count="4" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="38" count="4" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+        <line num="47" count="16" type="stmt"/>
+        <line num="48" count="16" type="stmt"/>
+        <line num="49" count="16" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

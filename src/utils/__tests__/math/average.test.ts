@@ -1,6 +1,6 @@
 import { average } from '../../math';
 
-describe('test average', () => {
+describe('average tests', () => {
   test('normal test 1', () => {
     expect(average()).toBeNaN();
   });

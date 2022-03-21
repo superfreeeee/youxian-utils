@@ -1,11 +1,11 @@
 import { throttle } from '../../optimization';
-import { waitAsync } from '../utils';
+import { wait } from '../../time';
 
 test('test throttle 1', async () => {
   let count = 0;
   const increment = () => count++;
 
-  const throttledIncrement = throttle(increment);
+  const throttledIncrement = throttle(increment, 10);
 
   // 连点 五次
   throttledIncrement();
@@ -16,7 +16,7 @@ test('test throttle 1', async () => {
 
   expect(count).toBe(0);
 
-  await waitAsync(1000);
+  await wait(20);
 
   expect(count).toBe(1);
 });
@@ -25,30 +25,29 @@ test('test throttle 2', async () => {
   let count = 0;
   const increment = () => count++;
 
-  const throttledIncrement = throttle(increment);
+  const throttledIncrement = throttle(increment, 10);
 
-  // 连点 五次 间隔 200ms
+  // 连点 五次 间隔 8ms
   throttledIncrement(); // ...1
-  await waitAsync(200);
+  await wait(5);
   expect(count).toBe(0);
 
   throttledIncrement(); // x
-  await waitAsync(200); // +1
+  await wait(15); // +1
   expect(count).toBe(1);
 
   throttledIncrement(); // ...2
-  await waitAsync(200);
+  await wait(5);
   expect(count).toBe(1);
 
   throttledIncrement(); // x
-  await waitAsync(200); // +2
+  await wait(15); // +2
   throttledIncrement(); // ...3
-  await waitAsync(200);
+  await wait(5);
   expect(count).toBe(2);
-
-  await waitAsync(200);
+  await wait(15); // +3
   throttledIncrement(); // ...4
-  await waitAsync(1000);
+  await wait(15);
 
   expect(count).toBe(4);
 });

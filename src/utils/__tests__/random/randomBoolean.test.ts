@@ -1,7 +1,7 @@
-import { isDev } from './../../../constants/env';
+import Log from '../../../libs/logger';
 import { randomBoolean } from '../../random';
 
-describe('test randomBoolean', () => {
+describe('randomBoolean tests', () => {
   Array(5)
     .fill(0)
     .forEach((_, i) => {
@@ -16,7 +16,7 @@ describe('test randomBoolean', () => {
           bool ? trueCount++ : falseCount++;
         }
 
-        isDev && console.log(`trueCount: ${trueCount}, falseCount: ${falseCount}`);
+        Log.info(`trueCount: ${trueCount}, falseCount: ${falseCount}`);
 
         expect(Math.abs(trueCount - falseCount)).toBeLessThan(TIMES / 10);
       });

@@ -1,15 +1,20 @@
 import { renderHook } from '@testing-library/react-hooks';
+import { useRef } from 'react';
 
-import useMount from '../useMount';
+import { useMount } from '../useMount';
 
-test('test useMount', () => {
-  let hasMount = false;
+describe('useMount tests', () => {
+  test('basic test', () => {
+    const { result } = renderHook(() => {
+      const isMountedRef = useRef(false);
 
-  renderHook(() => {
-    useMount(() => {
-      hasMount = true;
+      useMount(() => {
+        isMountedRef.current = true;
+      });
+
+      return { isMountedRef };
     });
-  });
 
-  expect(hasMount).toBe(true);
+    expect(result.current.isMountedRef.current).toBe(true);
+  });
 });

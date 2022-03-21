@@ -1,6 +1,6 @@
 import { isEven, isOdd } from './../../math';
 
-describe('test isEven', () => {
+describe('isEven tests', () => {
   test('normal test 1', () => {
     expect(isEven(2)).toBe(true);
   });

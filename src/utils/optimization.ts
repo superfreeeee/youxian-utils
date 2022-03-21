@@ -2,18 +2,13 @@
  * 优化类型工具函数
  */
 
-// 默认防抖间隔
-const DEFAULT_DEBOUNCE_DELAY = 300;
-// 默认截流间隔
-const DEFAULT_THROTTLE_DELAY = 300;
-
 /**
  * 防抖
  * @param fn
  * @param delay
  * @returns
  */
-export const debounce = (fn: Function, delay: number = DEFAULT_DEBOUNCE_DELAY) => {
+export const debounce = (fn: Function, delay: number) => {
   let timer: number | null = null;
 
   return (...args: any[]) => {
@@ -30,7 +25,7 @@ export const debounce = (fn: Function, delay: number = DEFAULT_DEBOUNCE_DELAY) =
  * @param delay 毫秒
  * @returns
  */
-export const throttle = (fn: Function, delay: number = DEFAULT_THROTTLE_DELAY) => {
+export const throttle = (fn: Function, delay: number) => {
   let lock = false;
 
   return (...args: any[]) => {
@@ -45,12 +40,16 @@ export const throttle = (fn: Function, delay: number = DEFAULT_THROTTLE_DELAY) =
   };
 };
 
+interface OnceFn<T> {
+  (...args: any[]): T;
+}
+
 /**
- * 缓存函数执行结果
+ * Create copied function that invoke only once and remember result
  * @param fn
  * @returns
  */
-export const cache = <T>(fn: (...args: any[]) => T): ((...args: any[]) => T) => {
+export const once = <T>(fn: OnceFn<T>): OnceFn<T> => {
   let result = null;
   let done = false;
 
@@ -58,7 +57,7 @@ export const cache = <T>(fn: (...args: any[]) => T): ((...args: any[]) => T) => 
     if (!done) {
       result = fn(...args);
       done = true;
-      fn = null; // 释放函数内存
+      fn = null; // release reference of fn for memory optimization
     }
 
     return result;

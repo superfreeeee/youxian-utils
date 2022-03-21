@@ -7,7 +7,8 @@
  * @param nums
  * @returns
  */
-export const sum = (...nums: number[]): number => nums.reduce((sum, next) => sum + next, 0);
+export const sum = (...nums: number[]): number =>
+  nums.reduce((sum, next) => sum + next, 0);
 
 /**
  * 平均数
@@ -31,7 +32,7 @@ export const isEven = (num: number) => num % 2 === 0;
 export const isOdd = (num: number) => num % 2 === 1;
 
 /**
- * 数字序列生成器
+ * Create a numer sequence
  * @param start
  * @param end
  * @param step
@@ -40,7 +41,11 @@ export const isOdd = (num: number) => num % 2 === 1;
 export function range(end: number): number[];
 export function range(start: number, end: number): number[];
 export function range(start: number, end: number, step: number): number[];
-export function range(start: number, end?: number | undefined, step?: number | undefined): number[] {
+export function range(
+  start: number,
+  end?: number | undefined,
+  step?: number | undefined,
+): number[] {
   if (end === undefined) {
     // end -> [0, end, 1]
     [start, end, step] = [0, start, 1];
@@ -49,5 +54,8 @@ export function range(start: number, end?: number | undefined, step?: number | u
     [start, end, step] = [start, end, 1];
   }
 
-  return Array.from({ length: (end - start) / step }, (_, i) => start + i * step);
+  return Array.from(
+    { length: (end - start) / step },
+    (_, i) => start + i * step,
+  );
 }

@@ -1,6 +1,6 @@
 import { range } from '../../math';
 
-describe('test range', () => {
+describe('range tests', () => {
   test('normal test 1', () => {
     expect(range(5)).toEqual([0, 1, 2, 3, 4]);
   });

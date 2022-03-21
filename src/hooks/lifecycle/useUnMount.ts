@@ -4,10 +4,10 @@ import { useEffect, useRef } from 'react';
  * componentWillUnMount hook 版本
  * @param fn
  */
-const useUnMount = (fn: () => any): void => {
+export const useUnMount = (fn: VoidFunction): void => {
   const fnRef = useRef(fn);
   fnRef.current = fn;
-  useEffect(() => fnRef.current(), []);
+  useEffect(() => fnRef.current, []);
 };
 
 export default useUnMount;

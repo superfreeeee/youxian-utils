@@ -1,16 +1,11 @@
-import { useState, useCallback } from 'react';
-
-type ForceUpdateFn = () => void;
+import { useReducer } from 'react';
 
 /**
- * 导出强制更新组件函数
+ * Return force re-render method
  * @returns
  */
-const useForceUpdate = (): ForceUpdateFn => {
-  const [bool, setBool] = useState(false);
-
-  const forceUpdate = useCallback(() => setBool(!bool), [bool]);
-
+export const useForceUpdate = (): (() => void) => {
+  const [, forceUpdate] = useReducer(() => ({}), null);
   return forceUpdate;
 };
 

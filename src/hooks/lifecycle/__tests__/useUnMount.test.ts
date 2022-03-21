@@ -1,21 +1,26 @@
 import { renderHook, act, cleanup } from '@testing-library/react-hooks';
+import { useRef } from 'react';
 
-import useUnMount from '../useUnMount';
+import { useUnMount } from '../useUnMount';
 
-test('test useUnMount', () => {
-  let hasUnMount = false;
+describe('useUnMount tests', () => {
+  test('basic test', () => {
+    const { result } = renderHook(() => {
+      const isUnMountedRef = useRef(false);
 
-  renderHook(() => {
-    useUnMount(() => {
-      hasUnMount = true;
+      useUnMount(() => {
+        isUnMountedRef.current = true;
+      });
+
+      return { isUnMountedRef };
     });
+
+    expect(result.current.isUnMountedRef.current).toBe(false);
+
+    act(() => {
+      cleanup();
+    });
+
+    expect(result.current.isUnMountedRef.current).toBe(true);
   });
-
-  expect(hasUnMount).toBe(false);
-
-  act(() => {
-    cleanup();
-  });
-
-  expect(hasUnMount).toBe(true);
 });

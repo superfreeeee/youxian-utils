@@ -1,8 +1,8 @@
-import { cache } from './../../optimization';
+import { once } from '../../optimization';
 
 test('test cache', () => {
   let doCount = 0;
-  let res = null;
+  let res: number | null = null;
 
   const NUM = 0x123456;
 
@@ -15,15 +15,15 @@ test('test cache', () => {
   expect(res).toBe(null);
   expect(doCount).toBe(0);
 
-  const cachedFn = cache(fn);
+  const onceFn = once(fn);
 
   // 第一次执行
-  res = cachedFn();
+  res = onceFn();
   expect(res).toBe(NUM);
   expect(doCount).toBe(1);
 
   // 第二次执行
-  res = cachedFn();
+  res = onceFn();
   expect(res).toBe(NUM);
   expect(doCount).toBe(1);
 });

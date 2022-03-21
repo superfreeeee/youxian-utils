@@ -14,8 +14,12 @@ export const randomBoolean = (): boolean => Math.random() > 0.5;
  * @param max
  * @returns
  */
+export function randomInt(): number;
 export function randomInt(max: number): number;
-export function randomInt(min?: number | undefined, max?: number | undefined): number {
+export function randomInt(
+  min?: number | undefined,
+  max?: number | undefined,
+): number {
   if (min === undefined) {
     [min, max] = [0, 1];
   } else if (max === undefined) {

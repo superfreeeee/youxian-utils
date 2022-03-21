@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 
 /**
- * componentDidMount hook 版本
+ * componentDidMount in hook version
  * @param fn
  */
-const useMount = (fn: () => void): void => {
+export const useMount = (fn: VoidFunction): void => {
   useEffect(fn, []);
 };
 

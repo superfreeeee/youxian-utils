@@ -1,20 +1,19 @@
 import { useCallback, useState } from 'react';
 
+interface IUseBooleanUtils {
+  setTrue: VoidFunction;
+  setFalse: VoidFunction;
+  toggle: VoidFunction;
+}
+
+type IRes = [boolean, IUseBooleanUtils];
+
 /**
- * bool 值
+ * use bool state
  * @param initValue
  * @returns
  */
-const useBoolean = (
-  initValue: boolean = false
-): [
-  boolean,
-  {
-    setTrue: () => void;
-    setFalse: () => void;
-    toggle: () => void;
-  }
-] => {
+export const useBoolean = (initValue: boolean = false): IRes => {
   const [state, setState] = useState(initValue);
 
   const setTrue = useCallback(() => {
