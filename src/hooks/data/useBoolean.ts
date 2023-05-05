@@ -13,7 +13,7 @@ type IRes = [boolean, IUseBooleanUtils];
  * @param initValue
  * @returns
  */
-export const useBoolean = (initValue: boolean = false): IRes => {
+export const useBoolean = (initValue: boolean = false) => {
   const [state, setState] = useState(initValue);
 
   const setTrue = useCallback(() => {
@@ -28,7 +28,7 @@ export const useBoolean = (initValue: boolean = false): IRes => {
     setState(!state);
   }, [state]);
 
-  return [state, { setTrue, setFalse, toggle }];
+  return [state, { setTrue, setFalse, toggle }] as const;
 };
 
 export default useBoolean;
