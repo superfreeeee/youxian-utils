@@ -1,5 +1,5 @@
 import { debounce } from '../../optimization';
-import { wait } from '../../time';
+import { sleep } from '../../time/sleep';
 
 test('test debounce 1', async () => {
   let count = 0;
@@ -17,7 +17,7 @@ test('test debounce 1', async () => {
   // 不会马上生效
   expect(count).toBe(0);
 
-  await wait(20);
+  await sleep(20);
 
   // 只触发最后一次
   expect(count).toBe(1);
@@ -32,26 +32,26 @@ test('test debounce 2', async () => {
   // 模拟连点 5 次，间隔 300 ms
   debouncedIncrement();
 
-  await wait(20);
+  await sleep(20);
   expect(count).toBe(1);
 
   debouncedIncrement();
 
-  await wait(20);
+  await sleep(20);
   expect(count).toBe(2);
 
   debouncedIncrement();
 
-  await wait(20);
+  await sleep(20);
   expect(count).toBe(3);
 
   debouncedIncrement();
 
-  await wait(20);
+  await sleep(20);
   expect(count).toBe(4);
 
   debouncedIncrement();
 
-  await wait(20);
+  await sleep(20);
   expect(count).toBe(5);
 });

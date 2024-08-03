@@ -37,15 +37,3 @@ export const createTimer = (delay: number): Timer => {
 
   return { reset, next };
 };
-
-/**
- * Create a Promise for synchronous
- * @param delay resolve in delay ms
- * @returns
- */
-export const wait = (delay: number): Promise<void> =>
-  new Promise((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, delay);
-  });

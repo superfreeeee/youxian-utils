@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "lib": ["ES2020", "DOM"],
-    "baseUrl": ".",
     "types": ["vitest/globals"],
 
     // feature

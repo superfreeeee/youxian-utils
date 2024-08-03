@@ -1,4 +1,4 @@
-import { defer } from '..';
+import { defer } from './defer';
 
 describe('defer-promise tests', () => {
   test('resolve test', () => {
