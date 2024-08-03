@@ -1,6 +1,6 @@
 {
   "name": "@youxian/utils",
-  "version": "0.1.1",
+  "version": "0.2.0-beta.1",
   "description": "utils made by @youxian",
   "keywords": [
     "utils",
@@ -10,12 +10,18 @@
   "author": "superfree <superfreeeee@gmail.com>",
   "homepage": "https://github.com/superfreeeee/youxian-utils#readme",
   "license": "MIT",
-  "main": "lib/index.js",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./lib/esm/index",
+      "require": "./lib/cjs/index"
+    }
+  },
   "scripts": {
-    "build": "pnpm clean && pnpm build:babel && tsc && pnpm build:webpack",
-    "build:babel": "babel src/ -d lib/ -x .ts",
-    "build:webpack": "webpack",
+    "build": "pnpm build:clean && pnpm build:esm && pnpm build:cjs",
+    "build:esm": "babel src/ -d lib/esm/ -x .ts --config-file ./babel.config.esm.json",
+    "build:cjs": "babel src/ -d lib/cjs/ -x .ts --config-file ./babel.config.cjs.json",
+    "build:clean": "rm -rf lib",
     "test": "vitest --run",
     "test:watch": "vitest"
   },
@@ -39,30 +45,27 @@
     "url": "https://github.com/superfreeeee/youxian-utils/issues"
   },
   "devDependencies": {
-    "@babel/cli": "^7.15.7",
-    "@babel/core": "^7.15.5",
-    "@babel/node": "^7.15.4",
-    "@babel/preset-env": "^7.15.6",
-    "@babel/preset-react": "^7.14.5",
-    "@babel/preset-typescript": "^7.15.0",
+    "@babel/cli": "^7.24.8",
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/preset-react": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
     "@testing-library/react-hooks": "^7.0.2",
-    "@types/debug": "^4.1.7",
-    "@types/node": "^20.12.11",
-    "@types/react": "^17.0.24",
-    "@types/react-test-renderer": "^17.0.1",
-    "babel-loader": "^8.2.2",
-    "clean-webpack-plugin": "^4.0.0",
+    "@types/debug": "^4.1.12",
+    "@types/node": "^20.14.14",
+    "@types/react": "^17.0.80",
     "react": "^17.0.2",
-    "typescript": "^4.4.3",
-    "vitest": "^2.0.5",
-    "webpack": "^5.53.0",
-    "webpack-cli": "^4.8.0",
-    "webpackbar": "^5.0.0-3"
+    "typescript": "^4.9.5",
+    "vitest": "^2.0.5"
   },
   "peerDependencies": {
     "react": "^17.0.2"
   },
   "dependencies": {
-    "debug": "^4.3.2"
+    "debug": "^4.3.6"
+  },
+  "engines": {
+    "node": ">=16",
+    "pnpm": ">=9"
   }
 }

@@ -1,18 +1,16 @@
 {
   "compilerOptions": {
     "lib": ["ES2020", "DOM"],
+    "baseUrl": ".",
+    "types": ["vitest/globals"],
+
+    // feature
+    "jsx": "preserve",
+    "esModuleInterop": true,
+
+    // build
     "declaration": true,
     "emitDeclarationOnly": true,
-    "declarationDir": "lib",
-    "esModuleInterop": true,
-    "baseUrl": ".",
-    "jsx": "react",
-    "types": ["vitest/globals"],
-    "paths": {
-      "@*": ["src/*"],
-      "@utils": ["src/utils"],
-      "@hooks": ["src/hooks"]
-    }
-  },
-  "include": ["src/**/*"]
+    "declarationDir": "lib"
+  }
 }
