@@ -26,8 +26,7 @@
   },
   "files": [
     "lib",
-    "types",
-    "src"
+    "types"
   ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
