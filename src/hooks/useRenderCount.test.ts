@@ -1,6 +1,5 @@
-import { act, renderHook } from '@testing-library/react-hooks';
-import { useState } from 'react';
-import { useRenderCount } from '../useRenderCount';
+import { renderHook } from '@testing-library/react-hooks';
+import { useRenderCount } from './useRenderCount';
 
 describe('useRenderCount tests', () => {
   test('basic test', () => {

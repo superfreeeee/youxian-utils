@@ -1,4 +1,10 @@
-import { Deferred } from './types';
+export interface Deferred<T, E = Error> {
+  promise: Promise<T>;
+  resolve: (res: T) => void;
+  reject: (err: E) => void;
+}
+
+export class DeferTimeout extends Error {}
 
 interface DeferOptions {
   /**
@@ -11,9 +17,7 @@ interface DeferOptions {
  * Deferred Promise implementation
  * @returns
  */
-export const defer = <T, E = Error>(
-  options: DeferOptions = {},
-): Deferred<T, E> => {
+export const defer = <T, E = Error>(options: DeferOptions = {}): Deferred<T, E> => {
   const deferred = {} as Deferred<T, E>;
   deferred.promise = new Promise<T>((_resolve, _reject) => {
     deferred.resolve = _resolve;
@@ -21,7 +25,7 @@ export const defer = <T, E = Error>(
 
     if (options.timeout != null) {
       setTimeout(() => {
-        _reject(new Error('Deferred timeout rejected'));
+        _reject(new DeferTimeout('Deferred timeout rejected'));
       }, options.timeout);
     }
   });

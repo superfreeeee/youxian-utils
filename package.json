@@ -1,6 +1,6 @@
 {
   "name": "@youxian/utils",
-  "version": "0.2.0-beta.2",
+  "version": "0.2.0-beta.3",
   "description": "utils made by @youxian",
   "keywords": [
     "utils",
@@ -10,7 +10,6 @@
   "author": "superfree <superfreeeee@gmail.com>",
   "homepage": "https://github.com/superfreeeee/youxian-utils#readme",
   "license": "MIT",
-  "type": "module",
   "exports": {
     ".": {
       "import": "./lib/esm/index.js",

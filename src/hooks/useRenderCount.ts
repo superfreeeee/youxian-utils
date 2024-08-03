@@ -8,5 +8,3 @@ export const useRenderCount = (): number => {
   countRef.current++;
   return countRef.current;
 };
-
-export default useRenderCount;

@@ -9,8 +9,11 @@
     "esModuleInterop": true,
 
     // build
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "declarationDir": "lib"
+    "noEmit": true,
+    "declaration": false,
+
+    // lint
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true
   }
 }
