@@ -2,6 +2,7 @@
   "transform": {
     "^.+\\.tsx?$": "ts-jest"
   },
+  "collectCoverageFrom": ["src/**/*.{js,ts,jsx,tsx}"],
   "testRegex": "/src/(\\.|/)|.*/__tests__/(\\.|/)|.*\\.test\\.(js|jsx|ts|tsx)$",
   "testPathIgnorePatterns": ["/templates/"],
   "moduleDirectories": ["node_modules", "src"],
